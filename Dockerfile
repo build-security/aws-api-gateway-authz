@@ -6,6 +6,7 @@ WORKDIR /app
 COPY . .
 ARG MAXMIND_LICENSE_KEY
 RUN make fetch-assets
+RUN go mod vendor
 RUN GOFLAGS=-mod=vendor make build
 
 # Run executable

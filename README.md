@@ -1,11 +1,13 @@
 # aws-api-gateway-authz
 
-This package showcases an example of how Open Policy Agent (OPA) can be used as a Policy Decision Point (PDP) to provide featureful access control.
+This package provides code used to showcase an example of how Open Policy Agent (OPA) can be used as a Policy Decision Point (PDP) to provide featureful access control.
+
+In our example, we pass [AWS API Gateway](https://aws.amazon.com/api-gateway/) request objects via an [AWS Lambda Authorizer](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html) to the PDP implemented in this package. The PDP makes authz decisions based on the policy we define, using the incoming request as context for the decision. The PDP gives us more fine-grained control than AWS API Gateway's native authz options. For instance, the requests can be authz based on request time of day, on the request IP's geolocation, or be rate-limited in multiple ways.
 
 This package contains:
 
 - An OPA enhancement that adds [two custom builtins functions](./builtins) to create our PDP
-- [Policy code](./policy) that defines our access control
+- [Policy code](./policy) that defines our access control, by using an AWS API Gateway request object as context for making policy decisions
 
 ## Builtins
 
@@ -33,7 +35,7 @@ After [setting up Redis](https://redis.io/topics/quickstart), you can use our Do
 
 ```
 docker pull buildsecurity/api-gw-pdp
-docker exec \
+docker run \
     -e RATE_LIMITER_REDIS_ENDPOINT=<your Redis endpoint> \
     -e RATE_LIMITER_REDIS_PASSWORD=<your Redis password, if you've set one> \
     -e RATE_LIMITER_DURATION=<the duration basis for rate-limiting> \
@@ -60,7 +62,13 @@ build.geo_from_ip("8.8.8.8")
 
 The build downloads Maxmind geolocation assets and packages them into the PDP. To build from scratch, you need to [create a MaxMind account](https://www.maxmind.com/en/geolite2/signup) and [generate a license key](https://www.maxmind.com/en/accounts/current/license-key).
 
-Then run
+Then from the package root, run
 ```
 MAXMIND_LICENSE_KEY=<your license> make fetch-assets && make build
+```
+
+The resulting binary for the PDP works just like the `opa` command:
+
+```
+./api_gw_pdp
 ```

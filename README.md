@@ -40,7 +40,7 @@ docker run \
     -e RATE_LIMITER_REDIS_PASSWORD=<your Redis password, if you've set one> \
     -e RATE_LIMITER_DURATION=<the duration basis for rate-limiting> \
     -p 8181:8181 \
-    --name pdp
+    --name pdp \
     buildsecurity/api-gw-pdp
 ```
 

@@ -1,0 +1,5 @@
+.terraform*
+poc-key-pair*
+*.tfstate*
+.DS_Store
+plan

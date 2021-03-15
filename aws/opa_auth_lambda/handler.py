@@ -6,10 +6,11 @@
 # - returns the decision to AWS API Gateway
 import os
 import re
+import requests
 
-from botocore.vendored import requests
-
-pdp_endpoint = os.environ['pdp_endpoint_ec2']
+pdp_host = os.environ['PDP_HOST']
+pdp_policy_path = os.environ['PDP_POLICY_PATH']
+pdp_endpoint = 'http://{}:8181/v1/data/{}'.format(pdp_host, pdp_policy_path)
 
 def lambda_handler(event, context):
     result = call_opa(event)

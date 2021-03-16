@@ -74,4 +74,5 @@ The resulting binary for the PDP works just like the `opa` command:
 
 
 ## Terraform Setup
-Browse aws/Terraform/README.MD for detailed Terraform instructions
+For your convenience, we have added Terraform scripts for creating the entire set-up of this demonstration on AWS.
+For more information, visit the README file in the `aws` directory.

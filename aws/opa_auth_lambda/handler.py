@@ -4,12 +4,13 @@
 # - receives a policy decision from the PDP, or an appropriate error message
 # - converts the policy decision into an object that API Gateway can understand
 # - returns the decision to AWS API Gateway
-
+import os
 import re
+import requests
 
-from botocore.vendored import requests
-
-pdp_endpoint = '<your PDP endpoint'
+pdp_host = os.environ['PDP_HOST']
+pdp_policy_path = os.environ['PDP_POLICY_PATH']
+pdp_endpoint = 'http://{}:8181/v1/data/{}'.format(pdp_host, pdp_policy_path)
 
 def lambda_handler(event, context):
     result = call_opa(event)

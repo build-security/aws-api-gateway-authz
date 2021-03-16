@@ -72,3 +72,6 @@ The resulting binary for the PDP works just like the `opa` command:
 ```
 ./api_gw_pdp
 ```
+## Terraform Setup
+For your convenience, we have added Terraform scripts for creating the entire set-up of this demonstration on AWS.
+For more information, visit the README file in the `aws` directory.

@@ -2,7 +2,7 @@ variable "AWS_REGION" {
  
     default = "eu-west-2"
 }
-/*
+
 variable "AWS_ACCESS_KEY"  {
   type        = string
   description = "AWS access key used to create infrastructure"
@@ -13,7 +13,7 @@ variable "AWS_SECRET_KEY" {
   type        = string
   description = "AWS secret key used to create AWS infrastructure"  
 }
-*/
+
 variable "PRIVATE_KEY_PATH" {
   default = "poc-key-pair"
 }

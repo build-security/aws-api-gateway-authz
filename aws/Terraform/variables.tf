@@ -37,11 +37,6 @@ variable "AMI" {
     }
 }
 
-variable "avail_zn" {
-    type = string
-    default = "us-east-2a"  
-}
-
 variable "cidr_block" {
     type = string
     default = "10.1.0.0/16"  

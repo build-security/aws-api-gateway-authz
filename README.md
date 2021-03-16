@@ -71,4 +71,8 @@ The resulting binary for the PDP works just like the `opa` command:
 
 ```
 ./api_gw_pdp
-```
+
+
+## Terraform Module README.MD
+Browse aws/Terraform/README.MD for detailed Terraform instructions
+

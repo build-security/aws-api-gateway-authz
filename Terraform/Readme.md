@@ -46,4 +46,4 @@ docker run \
     buildsecurity/pdp
 ```
 
-## Verify the container is running & that the pdp has retrieved the policy successfully.
+## Verify the container is running & that the PDP has retrieved the policy successfully.

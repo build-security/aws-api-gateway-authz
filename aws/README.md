@@ -46,8 +46,8 @@ docker run \
     -e RATE_LIMITER_REDIS_ENDPOINT=<http://your Redis primary endpoint:port> \
     -e RATE_LIMITER_REDIS_PASSWORD=<your Redis password, if you've set one> \
     -e RATE_LIMITER_DURATION=<the duration basis for rate-limiting> \
-    -e API_KEY=<the API key provided that was create in the build.security console> \
-    -e API_SECRET=<the API secret provided that was create in the build.security console> \
+    -e API_KEY=<the API key provided that was created in the build.security console> \
+    -e API_SECRET=<the API secret provided that was created in the build.security console> \
     -e CONTROL_PLANE_ADDR="https://api.poc.build.security/v1/api/pdp" \
     -p 8181:8181 \
     --name pdp \

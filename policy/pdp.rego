@@ -1,4 +1,6 @@
-package aws.apigw.pdp
+package authz
+
+default allow = false
 
 # Set defaults for rules.
 default allow_user = "You are not authorized to access this service"
@@ -10,6 +12,8 @@ default stateless_checks_failed = false
 default allow_user_rate = "You have exceeded your user request quota for this service"
 default allow_group_rate = "You have exceeded your group request quota for this service"
 
+default authorize = false
+
 # Based on the architecture, an identity provider will convert
 # tokens held by the user to a user identifier. In this example, the
 # user is directly accepted as a header.
@@ -17,8 +21,8 @@ user := input.headers.user
 
 # Authorization context for this user is fetched from a Data Source,
 # for example an AWS DynamoDB table.
-user_ctx := data.datasources.internal.users[user]
-group_ctx := data.datasources.internal.groups[user_ctx.group]
+user_ctx := data.datasources.mock_db.users[user]
+group_ctx := data.datasources.mock_db.groups[user_ctx.group]
 
 # Handle basic user check.
 allow_user = x {
@@ -91,7 +95,8 @@ allow {
   count(passed) == count(all_checks)
 }
 
-allow = message {
+authz_error = message {
+  not authorize
   failed := [x | x := all_checks[_]; x != true]
   message := failed[0]
 }

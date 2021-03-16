@@ -27,7 +27,7 @@ def lambda_handler(event, context):
     
     if not (result['allow'] == True):
         response['context'] = {
-            'denyMessage': result['allow']
+            'denyMessage': result['authz_error']
         }
             
     

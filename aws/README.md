@@ -34,7 +34,7 @@ Terraform plan -out  <plan_name>
 Terraform apply ./<plan_name>
 ```
 ### Setup authorizer on method request:  
-Navigate via aws console to API Gateway Service.   
+Navigate via AWS console to the API Gateway Service.   
 Click on "Method Request" (see attached screenshot)   
 ![Alt text](./method-request.png?raw=true "Method")  
 

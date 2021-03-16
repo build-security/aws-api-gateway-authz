@@ -1,7 +1,7 @@
 # aws-api-gateway-authz Terraform
 
 This Terraform implementation allows to provision a quicks-tart setup of all AWS resources required for testing purposes and is intended for users who are familiar with Terraform.
-The following library will create a new vpc with the following resources, an api gateway, a lambda function serving as an authorizer , an elasticache redis instance and
+The following library will create a new VPC with the following resources: an API gateway, a Lambda function serving as an authorizer , an Elasticache Redis instance and
 an ec2 instance hosting the opa/pdp docker.
 
 ## Instructions

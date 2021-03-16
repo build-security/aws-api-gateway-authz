@@ -2,8 +2,7 @@
 
 This Terraform implementation allows to provision a quickstart setup of all AWS resources required for testing purposes and is intended for users who are familiar with Terraform.
 
-The following library will create a new VPC with the following resources: an API gateway, a Lambda function serving as an authorizer , an Elasticache Redis instance and  
-an EC2 instance hosting the OPA/PDP docker.
+The following library will create a new VPC with the following resources: an API gateway, a Lambda function serving as an authorizer , an Elasticache Redis instance and an EC2 instance hosting the OPA/PDP docker.
 
 ## Instructions
 
@@ -41,7 +40,6 @@ After the terraform-apply process has completed successfully, do the following:
 1. Locate your newly created Redis instance under the Elasticache service on AWS and copy the value from it's primary endpoint field.  
 
 2. Retrieve the EC2 instance public DNS (filter via tag  Name = "EC2_PDP" ) from the AWS console and use your configured key to ssh to it.
-
 Then, on the EC2 instance, run the following command:
 ```
 docker run \

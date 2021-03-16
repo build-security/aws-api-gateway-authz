@@ -3,3 +3,5 @@ poc-key-pair*
 *.tfstate*
 .DS_Store
 plan
+handler-zip
+test_config

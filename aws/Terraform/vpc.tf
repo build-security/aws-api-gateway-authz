@@ -14,7 +14,7 @@ resource "aws_subnet" "buildsec-subnet-public-1" {
     vpc_id = aws_vpc.buildsec-ec2-vpc.id
     cidr_block = var.cidr_block
     map_public_ip_on_launch = true//it makes this a public subnet
-    availability_zone = var.avail_zn
+    availability_zone = "${var.AWS_REGION}-1a"
     
     tags = {
         Name = "buildsec-subnet-public-1"

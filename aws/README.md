@@ -21,7 +21,7 @@ Update the terraform.tfvars file with the following mandatory parameters:
 ```
 cd aws/opa_auth_lambda ; pip3 install -r requirements.txt -t .  
 ```
-\*Please note the optional POLICY_PATH param, In case the policy path was changed from authz to a different value.  
+\* The optional POLICY_PATH variable denotes the relative path to the policy package. By default, the policy path would be `authz`. In case your policy package name was changed from `authz`, make sure you update this variable. 
 
 
 As listed on the variables file, it is also possible to modify the Region & Availability zone (default being eu-west-2).  

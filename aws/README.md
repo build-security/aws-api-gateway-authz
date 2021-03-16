@@ -19,7 +19,7 @@ Update the terraform.tfvars file with the following mandatory parameters:
 
 \* Install the required opa_auth_lambda dependencies by running:
 ```
-"cd aws/opa_auth_lambda ; pip3 install -r requirements.txt -t ."  
+cd aws/opa_auth_lambda ; pip3 install -r requirements.txt -t .  
 ```
 \*Please note the optional POLICY_PATH param, In case the policy path was changed from authz to a different value.  
 

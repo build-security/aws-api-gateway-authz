@@ -13,7 +13,7 @@ Update the terraform.tfvars file with the following mandatory parameters:
 2.AWS_ACCESS_KEY= "XXXXXX"
 3.PRIVATE_KEY_PATH = "XXXXXX"
 3.PRIVATE_KEY_PATH = "XXXXXX"
-* Create a new,unencrypted key, to allow terraform to establish it on the ec2 instance.
+* Create a new, unencrypted key, to allow Terraform to establish it on the EC2 instance.
 
 please note the optional policy_path param.In case the policy path was changed from authz to a different value.
 

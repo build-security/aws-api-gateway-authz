@@ -36,8 +36,10 @@ Terraform apply ./<plan_name>
 ### Setup authorizer on method request:  
 Navigate via aws console to API Gateway Service.   
 Click on "Method Request" (see attached screenshot)   
-![Alt text](./method-request.png?raw=true "Method") 
-Under Settings>Authorization choose gateway-opa-auth(see attached screenshot)
+![Alt text](./method-request.png?raw=true "Method")  
+
+Under Settings>Authorization choose gateway-opa-auth(see attached screenshot)  
+
 ![Alt text](./authorization.png?raw=true "Method") 
 
 

@@ -33,6 +33,17 @@ Terraform init
 Terraform plan -out  <plan_name>
 Terraform apply ./<plan_name>
 ```
+### Setup authorizer on method request:  
+Navigate via AWS console to the API Gateway Service.   
+Click on "Method Request" (see attached screenshot)   
+![Alt text](./method-request.png?raw=true "Method")  
+
+Under Settings>Authorization choose gateway-opa-auth(see attached screenshot)  
+
+![Alt text](./authorization.png?raw=true "Method") 
+
+
+
 ### Start up the PDP:
 
 After the terraform-apply process has completed successfully, do the following:

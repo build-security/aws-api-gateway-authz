@@ -564,16 +564,15 @@ resource "aws_api_gateway_deployment" "petstore_deployment" {
   }
 }
 
-/*
 resource "aws_api_gateway_stage" "petstore_test" {
-  deployment_id = aws_api_gateway_deployment.PetStore_deployment.id
+  deployment_id = aws_api_gateway_deployment.petstore_deployment.id
   rest_api_id   = aws_api_gateway_rest_api.petstore_api.id
   stage_name    = "test"
 }
 
 #-Currently stage unnecessary 
 
-*/
+
 #---------------------------------------------
 # API gateway authorize
 #---------------------------------------------

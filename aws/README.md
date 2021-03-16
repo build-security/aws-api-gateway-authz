@@ -24,7 +24,7 @@ cd aws/opa_auth_lambda ; pip3 install -r requirements.txt -t .
 \*Please note the optional POLICY_PATH param, In case the policy path was changed from authz to a different value.  
 
 
-As listed on the variables file, it is also possible to modify the Region & Availability zone(default being eu-west-2).  
+As listed on the variables file, it is also possible to modify the Region & Availability zone (default being eu-west-2).  
 You will need to populate the ami map according to your chosen region with the relevant amazon linux x64 architecture ami.
 
 ###  Running Terrraform:   

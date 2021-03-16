@@ -24,7 +24,7 @@ resource "aws_lambda_function" "lambda_opa_auth" {
     variables = {
       
       PDP_HOST = aws_instance.buildsec-pdp.public_dns
-      PDP_POLICY_PATH = var.policy_path
+      PDP_POLICY_PATH = var.POLICY_PATH
     
     }
   }

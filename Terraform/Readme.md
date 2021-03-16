@@ -31,7 +31,7 @@ Terraform apply
 
 After the terraform  apply process is finalized successfully, Do the following:
 1.Locate your newly created redis instance under elasticache service on aws and copy the value from it's primary endpoint field.
-2.retrieve the ec2 instance public dns(filter via tag  Name = "EC2_PDP" ) from the aws console and use your configured key to ssh to it.
+2.Retrieve the EC2 instance public DNS (filter via tag  Name = "EC2_PDP" ) from the AWS console and use your configured key to ssh to it.
 Then, on the EC2 instance, run the following command:
 
 docker run \

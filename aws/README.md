@@ -28,7 +28,7 @@ As listed on the variables file, it is also possible to modify the Region & Avai
 You will need to populate the ami map according to your chosen region with the relevant amazon linux x64 architecture ami.
 
 ###  Running Terrraform:   
-Once all parameters are in place, run the following:
+Once all parameters have been set, run the following:
 ```
 Terraform init  
 Terraform plan -out  <plan_name>

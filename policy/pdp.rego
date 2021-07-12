@@ -12,7 +12,7 @@ default stateless_checks_failed = false
 default allow_user_rate = "You have exceeded your user request quota for this service"
 default allow_group_rate = "You have exceeded your group request quota for this service"
 
-default authorize = false
+default allow = false
 
 # Based on the architecture, an identity provider will convert
 # tokens held by the user to a user identifier. In this example, the
@@ -96,7 +96,7 @@ allow {
 }
 
 authz_error = message {
-  not authorize
+  not allow
   failed := [x | x := all_checks[_]; x != true]
   message := failed[0]
 }
